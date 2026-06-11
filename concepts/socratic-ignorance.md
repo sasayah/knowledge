@@ -1,11 +1,12 @@
 ---
 name: 不知の自覚（無知の知）
-level: 1
+level: 2
 created: 2026-06-10
-last_review: 2026-06-10
-next_review: 2026-06-11
+last_review: 2026-06-11
+next_review: 2026-06-14
 review_history:
   - {date: 2026-06-10, mode: today, result: pass, level_after: 1}
+  - {date: 2026-06-11, mode: today, result: pass, level_after: 2}
 related: []
 source: "プラトン『ソクラテスの弁明』（紀元前4世紀）。訳語は納富信留（光文社古典新訳文庫）に従う"
 phase: 0
