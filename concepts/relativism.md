@@ -1,11 +1,12 @@
 ---
 name: 相対主義（人間尺度説）
-level: 1
+level: 2
 created: 2026-06-11
-last_review: 2026-06-11
-next_review: 2026-06-12
+last_review: 2026-06-12
+next_review: 2026-06-15
 review_history:
   - {date: 2026-06-11, mode: today, result: pass, level_after: 1}
+  - {date: 2026-06-12, mode: today, result: pass, level_after: 2}
 related: [socratic-ignorance]
 source: "プロタゴラス「人間は万物の尺度である」（紀元前5世紀）／自己論駁はプラトン『テアイテトス』"
 phase: 0
