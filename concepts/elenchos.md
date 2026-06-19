@@ -1,11 +1,12 @@
 ---
 name: 問答法（エレンコス）
-level: 1
+level: 2
 created: 2026-06-12
-last_review: 2026-06-12
-next_review: 2026-06-13
+last_review: 2026-06-20
+next_review: 2026-06-23
 review_history:
   - {date: 2026-06-12, mode: today, result: pass, level_after: 1}
+  - {date: 2026-06-20, mode: today, result: pass, level_after: 2}
 related: [socratic-ignorance, relativism]
 source: "ソクラテスの方法（プラトン初期対話篇『ラケス』『エウテュプロン』など）"
 phase: 0
