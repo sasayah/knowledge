@@ -11,4 +11,4 @@ argument-hint: "[枚数 or 概念slug]"
 3. 判定は pass/partial/fail を根拠1〜2行つきで率直に。お世辞でpassにしない。
 4. frontmatter更新（§3.3: pass=+1, partial=据え置き・半間隔, fail=−1・翌日。間隔 L1=1d/L2=3d/L3=7d/L4=21d/L5=60d）。review_history に `{date, mode: quiz, result, level_after}` を1行追記。
 5. 当日の日次ノートがあれば frontmatter の concepts_reviewed に出題slugを追加（重複除外）。**無くても新規作成しない**（/quiz はセッションにカウントせず、progress.md も触らない）。
-6. まとめ（◯枚中◯pass、昇格カード名）→ コミット: `quiz: YYYY-MM-DD (n cards, m pass)`
+6. まとめ（◯枚中◯pass、昇格カード名）→ コミット: `quiz: YYYY-MM-DD (n cards, m pass)` → `git push`（失敗しても警告のみで続行。リモート未設定なら黙ってスキップ）

@@ -8,7 +8,7 @@ argument-hint: "[short|min]"
 
 ## 0. 準備（ユーザーに見せず素早く）
 
-1. `date +%F` で今日の日付、`date +%G-W%V` で今週のISO週番号を取得。
+1. **同期**: `git pull --rebase` を試行（複数PCで使うため最初に最新を取り込む。コンフリクトや失敗時はユーザーに知らせて指示を仰ぐ。リモート未設定なら黙ってスキップ）。続けて `date +%F` で今日の日付、`date +%G-W%V` で今週のISO週番号を取得。
 2. この順で読む: `progress.md` → 直前の日次ノート（`daily/` 以下で最新）→ `curriculum/syllabus.md` の今週ブロック。
 3. 期限到来カードを抽出（concepts/ にカードが無ければ「対象なし」扱い）:
    `grep -H '^next_review:' concepts/*.md | awk -F': *' -v t="$(date +%F)" '$3 <= t {print $3, $1}' | sort | head -3`
@@ -44,7 +44,7 @@ streak と前回の文脈を1〜2行で。今日の範囲（シラバスから�
 2. 所要分数を聞く。
 3. 日次ノートを `templates/daily.md` から `daily/YYYY/MM/YYYY-MM-DD.md` に生成。`{{ }}` は全置換（残存禁止）。streak算出: 直前ノートの date が昨日なら +1、それ以外は 1。session は直前ノートの session+1（初回は1）。
 4. `progress.md` を全再生成（docs/system-design.md §6。longest_streak は旧値と今回streakの大きい方。レベル分布は `grep -h '^level:' concepts/*.md | sort | uniq -c`）。
-5. コミット: `git add -A` → `git status --short` で意図しないファイル混入を目視 → `git commit -m "today: YYYY-MM-DD (streak N, +X concepts)"`（pushはしない）。
+5. コミット: `git add -A` → `git status --short` で意図しないファイル混入を目視 → `git commit -m "today: YYYY-MM-DD (streak N, +X concepts)"` → `git push`（失敗しても警告表示のみで続行。リモート未設定なら黙ってスキップ。push失敗でセッションは未完了にしない）。
 6. 「今日の進歩」をspecificに1行（汎用の褒め言葉は禁止）＋「今日はここまで。◯分でした」で終了。
 
 ## 異常系

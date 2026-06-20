@@ -28,4 +28,4 @@ argument-hint: "<テーマ or slug> [socratic|speech]"
 
 - 当日の日次ノート「問答ログ」にモード・テーマ・講評（speechは点数も）を追記。日次ノートが無ければ `templates/daily.md` から最小frontmatter（input: ""、news_applied: false。streak/session は規則どおり算出）で新規作成する（/talk だけの日も学習日としてstreakが繋がる）。
 - テーマが既存カードに対応する場合、review_history に `{mode: talk, ...}` を追記し §3.3 でSRS更新。**speechでの議論成立（評価16/20以上目安）はL4→L5昇格の正規ルート**。
-- progress.md は再生成しない。コミット: `talk: YYYY-MM-DD <slug>`（speech時は ` (speech 16/20)` のように点数を付す）
+- progress.md は再生成しない。コミット: `talk: YYYY-MM-DD <slug>`（speech時は ` (speech 16/20)` のように点数を付す）→ `git push`（失敗しても警告のみで続行。リモート未設定なら黙ってスキップ）

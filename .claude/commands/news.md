@@ -13,4 +13,4 @@ argument-hint: "[URL or トピック]"
 5. ユーザーに200字の「自分の見立て」を書かせる。AIの指摘は事実誤認と概念の誤用の2点のみ。
 6. 保存: `news/YYYY-MM-DD-<slug>.md`（templates/news.md から。`{{ }}` 全置換。slugはAI提案・ユーザー承認）。エッセイの種になりそうなら `essay_seed: true`。
 7. 使ったカードの review_history に `{mode: news, result: 判定, ...}` を追記し、§3.3 でSRS更新。当日の日次ノートが存在すれば「ニュース適用」セクションに1行（→ news/ファイル名 参照）追記。
-8. コミット: `news: YYYY-MM-DD <slug>`（progress.md は再生成しない）
+8. コミット: `news: YYYY-MM-DD <slug>`（progress.md は再生成しない）→ `git push`（失敗しても警告のみで続行。リモート未設定なら黙ってスキップ）

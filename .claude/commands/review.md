@@ -15,4 +15,4 @@ argument-hint: "[week|month|quarter]"
 5. **シラバス調整**: ズレに基づき来週（来月）のブロック案を提示し、**ユーザー承認後に** `syllabus.md` を更新、`## 変更履歴` に1行追記。今週ブロックの status も確定（done / skipped 等）。
    - **month**: フェーズ進行判定（roadmap.md の完了条件と照合。目安: 対象概念の70%以上がL3以上、中核概念の半数がL4以上）。第4日曜なら先に `/talk speech`（月次スピーチテスト）を勧める。
    - **quarter**: roadmap.md の見直しと `method/rules.md` の改訂提案まで行う（**ルール変更が許される年4回だけの場**。rules.md §4.2）。
-6. `progress.md` を再生成 → コミット: `review: <period>`。**push はこのコマンドでのみ試行**し、失敗しても警告表示のみで続行（リモート未設定なら黙ってスキップ）。
+6. `progress.md` を再生成 → コミット: `review: <period>` → `git push`（失敗しても警告表示のみで続行。リモート未設定なら黙ってスキップ）。
