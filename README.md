@@ -28,6 +28,24 @@ cd ~/Dev/hobby/knowledge && claude
 - システム仕様: [docs/system-design.md](docs/system-design.md)
 - 進捗: [progress.md](progress.md)（自動生成）
 
+## 別のPCで使う（同期）
+
+このリポジトリは GitHub（`git@github.com:sasayah/knowledge.git`）経由で複数PCから同じ環境を共有できる。
+
+初回だけ:
+
+```sh
+npm i -g @anthropic-ai/claude-code        # Claude Code 未インストールなら
+git clone git@github.com:sasayah/knowledge.git
+cd knowledge && claude
+```
+
+これで `/today` などのコマンドもコーチ人格（CLAUDE.md）もそのまま動く。**日々の同期は自動**——各コマンドはコミット後に `git push` し、`/today` は開始時に `git pull --rebase` する（[docs/system-design.md](docs/system-design.md) §7）。git を手で触る必要はない。
+
+AIコーチの背景文脈（学習目標・本リポジトリの位置づけ）を新PCでも最初から持たせたい場合のみ、[.claude/memory-seed/](.claude/memory-seed/) を一度だけ自動メモリ領域へコピーする（手順はそのフォルダの README 参照。任意。CLAUDE.md と progress.md からも文脈は復元できる）。
+
+> 2台運用の注意: `/today` 以外（例 `/quiz` 単発）には pull が入っていない。別PCで作業を始める日は最初に `/today`（または `git pull`）から入ると枝分かれを防げる。
+
 ## 原則（method/rules.md より）
 
 1. 続くことが最優先。1日の質より1年の継続。
